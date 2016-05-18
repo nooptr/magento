@@ -11,7 +11,7 @@ use Magento\Framework\App\Action\Context;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Registry;
 
-class Leave extends \Magento\Customer\Controller\AbstractAccount
+class Deactivate extends \Magento\Customer\Controller\AbstractAccount
 {
     /**
      * @var Session

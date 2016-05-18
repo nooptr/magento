@@ -44,12 +44,11 @@
 </div>
 
 <div class="block block-dashboard-info">
-    <div class="block-title"><strong><?php /* @escapeNotVerified */ echo __('Withdrawal') ?></strong></div>
+    <div class="block-title"><strong><?php /* @escapeNotVerified */ echo __('Deactivate') ?></strong></div>
     <div class="block-content">
-        Are you sure you want to leave?
+        Are you sure you want to deactivate?
         <div class="box-actions">
-            <a class="action edit" href="<?php /* @escapeNotVerified */ echo $block->getUrl('newsletter/manage') ?>"><span><?php /* @escapeNotVerified */ echo __('Yes') ?></span></a>
-            <a class="action edit" href="<?php /* @escapeNotVerified */ echo $block->getUrl('newsletter/manage') ?>"><span><?php /* @escapeNotVerified */ echo __('No') ?></span></a>
+            <a class="action leave" href="<?php /* @escapeNotVerified */ echo $block->getUrl('customer/account/deactivate') ?>"><span><?php /* @escapeNotVerified */ echo __('Yes') ?></span></a>
         </div>
     </div>
 </div>
