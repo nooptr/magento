@@ -11,7 +11,7 @@ use Magento\Framework\App\Action\Context;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Registry;
 
-class Test extends \Magento\Customer\Controller\AbstractAccount
+class Leave extends \Magento\Customer\Controller\AbstractAccount
 {
     /**
      * @var Session
@@ -43,14 +43,11 @@ class Test extends \Magento\Customer\Controller\AbstractAccount
     public function execute()
     {
         $lastCustomerId = $this->session->getId();
-        //$this->session->logout()->setBeforeAuthUrl($this->_redirect->getRefererUrl())
-        //    ->setLastCustomerId($lastCustomerId);
         $this->session->logout();
         $this->customerRepository->deleteById($lastCustomerId);
 
         /** @var \Magento\Framework\Controller\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultRedirectFactory->create();
-        return $resultRedirect->setPath('*/*/logoutSuccess');
-        return $resultRedirect;
+        return $resultRedirect->setPath('/');
     }
 }
