@@ -36,7 +36,7 @@ class Deactivate extends \Magento\Customer\Controller\AbstractAccount
     }
 
     /**
-     * Customer logout action
+     * Customer deactivate action
      *
      * @return \Magento\Framework\Controller\Result\Redirect
      */
